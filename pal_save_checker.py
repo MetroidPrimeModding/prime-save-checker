@@ -34,6 +34,8 @@ with open(file, 'rb') as f:
     time2 = struct.unpack('>d', bytes(time2.to_bytes(8, 'big')))[0]
     time3 = struct.unpack('>d', bytes(time3.to_bytes(8, 'big')))[0]
 
-    print(time1)
-    print(time2)
-    print(time3)
+    print(f"Save 1: {time1} seconds: {int(time1 / 60 / 60)}:{int(time1 / 60 % 60):02}:{int(time1 % 60):02}")
+    print(f"Save 2: {time2} seconds: {int(time2 / 60 / 60)}:{int(time2 / 60 % 60):02}:{int(time2 % 60):02}")
+    print(f"Save 3: {time3} seconds: {int(time3 / 60 / 60)}:{int(time3 / 60 % 60):02}:{int(time3 % 60):02}")
+
+input("Press enter to close...")
